@@ -1,7 +1,1118 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
-    </body>
-</html>
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 700px;
+}
+
+#select_language {
+    font-size: 15px;
+    padding: 10px;
+    position: absolute;
+    top: 65px;
+    left: 75px;
+} 
+
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<style>
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+<p class="serif">
+<h1>
+<font color = "#0A6261">Languages Around the World</font>
+</h1>
+</p>
+
+
+<!-- Chart code -->
+<script>
+var map = AmCharts.makeChart( "chartdiv", {
+
+  "type": "map",
+  "theme": "light",
+  "projection": "miller",
+
+  "dataProvider": {
+    "map": "worldLow",
+    "getAreasFromMap": true,
+    "areas": [
+   {
+      "customData":"Dari Persian, Pashtu (both official), other Turkic and minor languages",
+      "id":"AF",
+      "title":"Afghanistan"
+   },
+   {
+      "customData":"Albanian (Tosk is the official dialect), Greek",
+      "id":"AL",
+      "title":"Albania"
+   },
+   {
+      "customData":"Arabic (official), French, Berber dialects",
+      "id":"DZ",
+      "title":"Algeria"
+   },
+   {
+      "customData":"Catalan (official), French, Castilian, Portuguese",
+      "id":"AD",
+      "title":"Andorra"
+   },
+   {
+      "customData":"Portuguese (official), Bantu and other African languages",
+      "id":"AO",
+      "title":"Angola"
+   },
+   {
+      "customData":"English (official), local dialects",
+      "id":"AG",
+      "title":"Antigua and Barbuda"
+   },
+   {
+      "customData":"Spanish (official), English, Italian, German, French",
+      "id":"AR",
+      "title":"Argentina"
+   },
+   {
+      "customData":"Armenian 98%, Yezidi, Russian",
+      "id":"AW",
+      "title":"Armenia"
+   },
+   {
+      "customData":"English 79%, native and other languages",
+      "id":"AU",
+      "title":"Australia"
+   },
+   {
+      "customData":"German (official nationwide); Slovene, Croatian, Hungarian (each official in one region)",
+      "id":"AT",
+      "title":"Austria"
+   },
+   {
+      "customData":"Azerbaijani Turkic 89%, Russian 3%, Armenian 2%, other 6% (1995 est.)",
+      "id":"AZ",
+      "title":"Azerbaijan"
+   },
+   {
+      "customData":"English (official), Creole (among Haitian immigrants)",
+      "id":"BS",
+      "title":"Bahamas"
+   },
+   {
+      "customData":"Arabic, English, Farsi, Urdu",
+      "id":"BH",
+      "title":"Bahrain"
+   },
+   {
+      "customData":"Bangla (official), English",
+      "id":"BD",
+      "title":"Bangladesh"
+   },
+   {
+      "customData":"English",
+      "id":"BB",
+      "title":"Barbados"
+   },
+   {
+      "customData":"Belorussian (White Russian), Russian, other",
+      "id":"BY",
+      "title":"Belarus"
+   },
+   {
+      "customData":"Dutch (Flemish) 60%, French 40%, German less than 1% (all official)",
+      "id":"BE",
+      "title":"Belgium"
+   },
+   {
+      "customData":"English (official), Spanish, Mayan, Garifuna (Carib), Creole",
+      "id":"BZ",
+      "title":"Belize"
+   },
+   {
+      "customData":"French (official), Fon, Yoruba, tribal languages",
+      "id":"BJ",
+      "title":"Benin"
+   },
+   {
+      "customData":"Dzongkha (official), Tibetan dialects (among Bhotes), Nepalese dialects (among Nepalese)",
+      "id":"BT",
+      "title":"Bhutan"
+   },
+   {
+      "customData":"Spanish, Quechua, Aymara (all official)",
+      "id":"BO",
+      "title":"Bolivia"
+   },
+   {
+      "customData":"Bosnian, Croatian, Serbian",
+      "id":"BA",
+      "title":"Bosnia and Herzegovina"
+   },
+   {
+      "customData":"English 2% (official), Setswana 78%, Kalanga 8%, Sekgalagadi 3%, other (2001)",
+      "id":"BW",
+      "title":"Botswana"
+   },
+   {
+      "customData":"Portuguese (official), Spanish, English, French",
+      "id":"BR",
+      "title":"Brazil"
+   },
+   {
+      "customData":"Malay (official), English, Chinese",
+      "id":"BN",
+      "title":"Brunei"
+   },
+   {
+      "customData":"Bulgarian 85%, Turkish 10%, Roma 4%",
+      "id":"BG",
+      "title":"Bulgaria"
+   },
+   {
+      "customData":"French (official); native African (Sudanic) languages 90%",
+      "id":"BF",
+      "title":"Burkina Faso"
+   },
+   {
+      "customData":"Kirundi and French (official), Swahili",
+      "id":"BI",
+      "title":"Burundi"
+   },
+   {
+      "customData":"Khmer 95% (official), French, English",
+      "id":"KH",
+      "title":"Cambodia"
+   },
+   {
+      "customData":"French, English (both official); 24 major African language groups",
+      "id":"CM",
+      "title":"Cameroon"
+   },
+   {
+      "customData":"English 59.3%, French 23.2% (both official); other 17.5%",
+      "id":"CA",
+      "title":"Canada"
+   },
+   {
+      "customData":"Portuguese, Criuolo",
+      "id":"KY",
+      "title":"Cape Verde"
+   },
+   {
+      "customData":"French (official), Sangho (lingua franca, national), tribal languages",
+      "id":"CF",
+      "title":"Central African Republic"
+   },
+   {
+      "customData":"French, Arabic (both official); Sara; more than 120 languages and dialects",
+      "id":"TD",
+      "title":"Chad"
+   },
+   {
+      "customData":"Spanish",
+      "id":"CL",
+      "title":"Chile"
+   },
+   {
+      "customData":"Standard Chinese (Mandarin/Putonghua), Yue (Cantonese), Wu (Shanghaiese), Minbei (Fuzhou), Minnan (Hokkien-Taiwanese), Xiang, Gan, Hakka dialects, minority languages",
+      "id":"CN",
+      "title":"China"
+   },
+   {
+      "customData":"Spanish",
+      "id":"CO",
+      "title":"Colombia"
+   },
+   {
+      "customData":"Arabic and French (both official), Shikomoro (Swahili/Arabic blend)",
+      "id":"KM",
+      "title":"Comoros"
+   },
+   {
+      "customData":"French (official), Lingala, Kingwana, Kikongo, Tshiluba",
+      "id":"CG",
+      "title":"Congo, Democratic Republic of the"
+   },
+   {
+      "customData":"French (official), Lingala, Monokutuba, Kikongo, many local languages and dialects",
+      "id":"CD",
+      "title":"Congo, Republic of"
+   },
+   {
+      "customData":"Spanish (official), English",
+      "id":"CR",
+      "title":"Costa Rica"
+   },
+   {
+      "customData":"French (official) and African languages (Dioula esp.)",
+      "id":"CI",
+      "title":"Cote d'Ivoire"
+   },
+   {
+      "customData":"Croatian 96% (official), other 4% (including Italian, Hungarian, Czech, Slovak, German)",
+      "id":"HR",
+      "title":"Croatia"
+   },
+   {
+      "customData":"Spanish",
+      "id":"CU",
+      "title":"Cuba"
+   },
+   {
+      "customData":"Greek, Turkish (both official); English",
+      "id":"CY",
+      "title":"Cyprus"
+   },
+   {
+      "customData":"Czech",
+      "id":"CZ",
+      "title":"Czech Republic"
+   },
+   {
+      "customData":"Danish, Faroese, Greenlandic (Inuit dialect), German; English is the predominant second language",
+      "id":"DK",
+      "title":"Denmark"
+   },
+   {
+      "customData":"French and Arabic (both official), Somali, Afar",
+      "id":"DJ",
+      "title":"Djibouti"
+   },
+   {
+      "customData":"English (official) and French patois",
+      "id":"DM",
+      "title":"Dominica"
+   },
+   {
+      "customData":"Spanish",
+      "id":"DO",
+      "title":"Dominican Republic"
+   },
+   {
+      "customData":"Tetum, Portuguese (official); Bahasa Indonesia, English; other indigenous languages, including Tetum, Galole, Mambae, and Kemak",
+      "id":"TL",
+      "title":"East Timor"
+   },
+   {
+      "customData":"Spanish (official), Quechua, other Amerindian languages",
+      "id":"EC",
+      "title":"Ecuador"
+   },
+   {
+      "customData":"Arabic (official), English and French widely understood by educated classes",
+      "id":"EG",
+      "title":"Egypt"
+   },
+   {
+      "customData":"Spanish, Nahua (among some Amerindians)",
+      "id":"SV",
+      "title":"El Salvador"
+   },
+   {
+      "customData":"Spanish, French (both official); pidgin English, Fang, Bubi, Ibo",
+      "id":"GQ",
+      "title":"Equatorial Guinea"
+   },
+   {
+      "customData":"Afar, Arabic, Tigre and Kunama, Tigrinya, other Cushitic languages",
+      "id":"ER",
+      "title":"Eritrea"
+   },
+   {
+      "customData":"Estonian 67% (official), Russian 30%, other (2000)",
+      "id":"EE",
+      "title":"Estonia"
+   },
+   {
+      "customData":"Amharic, Tigrigna, Orominga, Guaragigna, Somali, Arabic, English, over 70 others",
+      "id":"ET",
+      "title":"Ethiopia"
+   },
+   {
+      "customData":"English (official), Fijian, Hindustani",
+      "id":"FJ",
+      "title":"Fiji"
+   },
+   {
+      "customData":"Finnish 92%, Swedish 6% (both official); small Sami- (Lapp) and Russian-speaking minorities",
+      "id":"FI",
+      "title":"Finland"
+   },
+   {
+      "customData":"French 100%, rapidly declining regional dialects (Provencal, Breton, Alsatian, Corsican, Catalan, Basque, Flemish)",
+      "id":"FR",
+      "title":"France"
+   },
+   {
+      "customData":"French (official), Fang, Myene, Nzebi, Bapounou/Eschira, Bandjabi",
+      "id":"GA",
+      "title":"Gabon"
+   },
+   {
+      "customData":"English (official), Mandinka, Wolof, Fula, other indigenous",
+      "id":"GM",
+      "title":"Gambia"
+   },
+   {
+      "customData":"Georgian 71% (official), Russian 9%, Armenian 7%, Azerbaijani 6%, other 7% (Abkhaz is the official language in Abkhazia)",
+      "id":"GE",
+      "title":"Georgia"
+   },
+   {
+      "customData":"German",
+      "id":"DE",
+      "title":"Germany"
+   },
+   {
+      "customData":"English (official), African languages (including Akan, Moshi-Dagomba, Ewe, and Ga)",
+      "id":"GH",
+      "title":"Ghana"
+   },
+   {
+      "customData":"Greenlandic",
+      "id":"GL",
+      "title":"Greenland"
+   },
+   {
+      "customData":"English (official), French patois",
+      "id":"GD",
+      "title":"Grenada"
+   },
+   {
+      "customData":"Spanish 60%, Amerindian languages 40% (23 officially recognized Amerindian languages, including Quiche, Cakchiquel, Kekchi, Mam, Garifuna, and Xinca)",
+      "id":"GT",
+      "title":"Guatemala"
+   },
+   {
+      "customData":"French (official), native tongues (Malinke, Susu, Fulani)",
+      "id":"GN",
+      "title":"Guinea"
+   },
+   {
+      "customData":"Portuguese (official), Criolo, African languages",
+      "id":"GW",
+      "title":"Guinea-Bissau"
+   },
+   {
+      "customData":"English (official), Amerindian dialects, Creole, Hindi, Urdu",
+      "id":"GY",
+      "title":"Guyana"
+   },
+   {
+      "customData":"Creole and French (both official)",
+      "id":"HT",
+      "title":"Haiti"
+   },
+   {
+      "customData":"Spanish (official), Amerindian dialects; English widely spoken in business",
+      "id":"HN",
+      "title":"Honduras"
+   },
+   {
+      "customData":"Magyar (Hungarian) 94%, other 6%",
+      "id":"HU",
+      "title":"Hungary"
+   },
+   {
+      "customData":"Icelandic, English, Nordic languages, German widely spoken",
+      "id":"IS",
+      "title":"Iceland"
+   },
+   {
+      "customData":"Hindi 30%, English, Bengali, Gujarati, Kashmiri, Malayalam, Marathi, Oriya, Punjabi, Tamil, Telugu, Urdu, Kannada, Assamese, Sanskrit, Sindhi (all official); Hindi/Urdu; 1,600+ dialects",
+      "id":"IN",
+      "title":"India"
+   },
+   {
+      "customData":"Bahasa Indonesia (official), English, Dutch, Javanese, and more than 580 other languages and dialects",
+      "id":"ID",
+      "title":"Indonesia"
+   },
+   {
+      "customData":"Persian and Persian dialects 58%, Turkic and Turkic dialects 26%, Kurdish 9%, Luri 2%, Balochi 1%, Arabic 1%, Turkish 1%, other 2%",
+      "id":"IR",
+      "title":"Iran"
+   },
+   {
+      "customData":"Arabic (official), Kurdish (official in Kurdish regions), Assyrian, Armenian",
+      "id":"IQ",
+      "title":"Iraq"
+   },
+   {
+      "customData":"English, Irish (Gaelic) (both official)",
+      "id":"IE",
+      "title":"Ireland"
+   },
+   {
+      "customData":"Hebrew (official), Arabic, English",
+      "id":"IL",
+      "title":"Israel"
+   },
+   {
+      "customData":"Italian (official); German-, French-, and Slovene-speaking minorities",
+      "id":"IT",
+      "title":"Italy"
+   },
+   {
+      "customData":"English, Jamaican Creole",
+      "id":"JM",
+      "title":"Jamaica"
+   },
+   {
+      "customData":"Japanese",
+      "id":"JP",
+      "title":"Japan"
+   },
+   {
+      "customData":"Arabic (official), English",
+      "id":"JO",
+      "title":"Jordan"
+   },
+   {
+      "customData":"Kazak (Qazaq, state language) 64%; Russian (official, used in everyday business) 95% (2001 est.)",
+      "id":"KZ",
+      "title":"Kazakhstan"
+   },
+   {
+      "customData":"English (official), Swahili (national), and numerous indigenous languages",
+      "id":"KE",
+      "title":"Kenya"
+   },
+   {
+      "customData":"English (official), I-Kiribati (Gilbertese)",
+      "id":"KI",
+      "title":"Kiribati"
+   },
+   {
+      "customData":"Korean",
+      "id":"KP",
+      "title":"Korea, North"
+   },
+   {
+      "customData":"Korean, English widely taught",
+      "id":"KR",
+      "title":"Korea, South"
+   },
+   {
+      "customData":"Arabic (official), English",
+      "id":"KW",
+      "title":"Kuwait"
+   },
+   {
+      "customData":"Kyrgyz, Russian (both official)",
+      "id":"KG",
+      "title":"Kyrgyzstan"
+   },
+   {
+      "customData":"Lao (official), French, English, various ethnic languages",
+      "id":"LA",
+      "title":"Laos"
+   },
+   {
+      "customData":"Latvian 58% (official), Russian 38%, Lithuanian, other (2000)",
+      "id":"LV",
+      "title":"Latvia"
+   },
+   {
+      "customData":"Arabic (official), French, English, Armenian",
+      "id":"LB",
+      "title":"Lebanon"
+   },
+   {
+      "customData":"English, Sesotho (both official); Zulu, Xhosa",
+      "id":"LS",
+      "title":"Lesotho"
+   },
+   {
+      "customData":"English 20% (official), some 20 ethnic-group languages",
+      "id":"LR",
+      "title":"Liberia"
+   },
+   {
+      "customData":"Arabic, Italian, and English widely understood in major cities",
+      "id":"LY",
+      "title":"Libya"
+   },
+   {
+      "customData":"German (official), Alemannic dialect",
+      "id":"LI",
+      "title":"Liechtenstein"
+   },
+   {
+      "customData":"Lithuanian 82% (official), Russian 8%, Polish 6% (2001)",
+      "id":"LT",
+      "title":"Lithuania"
+   },
+   {
+      "customData":"Luxermbourgish (national) French, German (both administrative)",
+      "id":"LU",
+      "title":"Luxembourg"
+   },
+   {
+      "customData":"Macedonian 67%, Albanian 25% (both official); Turkish 4%, Roma 2%, Serbian 1% (2002)",
+      "id":"MK",
+      "title":"Macedonia"
+   },
+   {
+      "customData":"Malagasy and French (both official)",
+      "id":"MG",
+      "title":"Madagascar"
+   },
+   {
+      "customData":"Chichewa 57.2% (official), Chinyanja 12.8%, Chiyao 10.1%, Chitumbuka 9.5%, Chisena 2.7%, Chilomwe 2.4%, Chitonga 1.7%, other 3.6% (1998)",
+      "id":"MW",
+      "title":"Malawi"
+   },
+   {
+      "customData":"Bahasa Melayu (Malay, official), English, Chinese dialects (Cantonese, Mandarin, Hokkien, Hakka, Hainan, Foochow), Tamil, Telugu, Malayalam, Panjabi, Thai; several indigenous languages (including Iban, Kadazan) in East Malaysia",
+      "id":"MY",
+      "title":"Malaysia"
+   },
+   {
+      "customData":"Maldivian Dhivehi (official); English spoken by most government officials",
+      "id":"MV",
+      "title":"Maldives"
+   },
+   {
+      "customData":"French (official), Bambara 80%, numerous African languages",
+      "id":"ML",
+      "title":"Mali"
+   },
+   {
+      "customData":"Maltese and English (both official)",
+      "id":"MT",
+      "title":"Malta"
+   },
+   {
+      "customData":"Marshallese 98% (two major dialects from the Malayo-Polynesian family), English widely spoken as a second language (both official); Japanese",
+      "id":"MH",
+      "title":"Marshall Islands"
+   },
+   {
+      "customData":"Hassaniya Arabic (official), Pulaar, Soninke, French, Wolof",
+      "id":"MR",
+      "title":"Mauritania"
+   },
+   {
+      "customData":"English less than 1% (official), Creole 81%, Bojpoori 12%, French 3% (2000)",
+      "id":"MU",
+      "title":"Mauritius"
+   },
+   {
+      "customData":"Spanish, various Mayan, Nahuatl, and other regional indigenous languages",
+      "id":"MX",
+      "title":"Mexico"
+   },
+   {
+      "customData":"English (official, common), Chukese, Pohnpeian, Yapase, Kosrean, Ulithian, Woleaian, Nukuoro, Kapingamarangi",
+      "id":"FM",
+      "title":"Micronesia"
+   },
+   {
+      "customData":"Moldovan (official; virtually the same as Romanian), Russian, Gagauz (a Turkish dialect)",
+      "id":"MD",
+      "title":"Moldova"
+   },
+   {
+      "customData":"French (official), English, Italian, Monegasque",
+      "id":"MC",
+      "title":"Monaco"
+   },
+   {
+      "customData":"Mongolian, 90%; also Turkic and Russian (1999)",
+      "id":"MN",
+      "title":"Mongolia"
+   },
+   {
+      "customData":"Serbian/Montenegrin (Ijekavian dialect official)",
+      "id":"MS",
+      "title":"Montenegro"
+   },
+   {
+      "customData":"Arabic (official), Berber dialects, French often used for business, government, and diplomacy",
+      "id":"MA",
+      "title":"Morocco"
+   },
+   {
+      "customData":"Portuguese 9% (official; second language of 27%), Emakhuwa 26%, Xichangana 11%, Elomwe 8%, Cisena 7%, Echuwabo 6%, other Mozambican languages 32% (1997)",
+      "id":"MZ",
+      "title":"Mozambique"
+   },
+   {
+      "customData":"Burmese, minority languages",
+      "id":"MM",
+      "title":"Myanmar"
+   },
+   {
+      "customData":"English 7% (official), Afrikaans is common language of most of the population and of about 60% of the white population, German 32%; indigenous languages: Oshivambo, Herero, Nama",
+      "id":"NA",
+      "title":"Namibia"
+   },
+   {
+      "customData":"Nauruan (official), English",
+      "id":"NR",
+      "title":"Nauru"
+   },
+   {
+      "customData":"Nepali 48% (official), Maithali 12%, Bhojpuri 7%, Tharu 6%, Tamang 5%, others. English spoken by many in government and business (2001)",
+      "id":"NP",
+      "title":"Nepal"
+   },
+   {
+      "customData":"Dutch, Frisian (both official) English, Maori (both official for Netheraalnds Antilles)",
+      "id":"NC",
+      "title":"Netherlands"
+   },
+   {
+      "customData":"English, Maori (both official)",
+      "id":"NZ",
+      "title":"New Zealand"
+   },
+   {
+      "customData":"Spanish 98% (official); English and indigenous languages on Atlantic coast (1995)",
+      "id":"NI",
+      "title":"Nicaragua"
+   },
+   {
+      "customData":"French (official), Hausa, Djerma",
+      "id":"NE",
+      "title":"Niger"
+   },
+   {
+      "customData":"English (official), Hausa, Yoruba, Ibo, Fulani, and more than 200 others",
+      "id":"NG",
+      "title":"Nigeria"
+   },
+   {
+      "customData":"Bokmal Norwegian, Nynorsk Norwegian (both official); small Sami- and Finnish-speaking minorities (Sami is official in six municipalities)",
+      "id":"NO",
+      "title":"Norway"
+   },
+   {
+      "customData":"Arabic (official), English, Baluchi, Urdu, Indian dialects",
+      "id":"OM",
+      "title":"Oman"
+   },
+   {
+      "customData":"Urdu 8%, English (both official); Punjabi 48%, Sindhi 12%, Siraiki (a Punjabi variant) 10%, Pashtu 8%, Balochi 3%, Hindko 2%, Brahui 1%, Burushaski, and others 8%",
+      "id":"PK",
+      "title":"Pakistan"
+   },
+   {
+      "customData":"Palauan 64.7%, English 9.4%, Sonsoralese, Tobi, Angaur (each official on some islands), Filipino 13.5%, Chinese 5.7%, Carolinian 1.5%, Japanese 1.5%, other Asian 2.3%, other languages 1.5% (2000)",
+      "id":"PW",
+      "title":"Palau"
+   },
+   {
+      "customData":"Arabic, Hebrew, English",
+      "id":"PS",
+      "title":"Palestinian State (proposed)"
+   },
+   {
+      "customData":"Spanish (official), English 14%, many bilingual",
+      "id":"PA",
+      "title":"Panama"
+   },
+   {
+      "customData":"Tok Pisin (Melanesian Pidgin, the lingua franca), Hiri Motu (in Papua region), English 1%-2%; 715 indigenous languages",
+      "id":"PG",
+      "title":"Papua New Guinea"
+   },
+   {
+      "customData":"Spanish, Guarani (both official)",
+      "id":"PY",
+      "title":"Paraguay"
+   },
+   {
+      "customData":"Spanish, Quechua (both official); Aymara; many minor Amazonian languages",
+      "id":"PE",
+      "title":"Peru"
+   },
+   {
+      "customData":"Filipino (based on Tagalog), English (both official); eight major dialects: Tagalog, Cebuano, Ilocano, Hiligaynon or Ilonggo, Bicol, Waray, Pampango, and Pangasinense",
+      "id":"PN",
+      "title":"Philippines"
+   },
+   {
+      "customData":"Polish 98% (2002)",
+      "id":"PL",
+      "title":"Poland"
+   },
+   {
+      "customData":"Portuguese (official), Mirandese (official, but locally used)",
+      "id":"PT",
+      "title":"Portugal"
+   },
+   {
+      "customData":"Arabic (official); English a common second language",
+      "id":"RE",
+      "title":"Qatar"
+   },
+   {
+      "customData":"Romanian (official), Hungarian, German",
+      "id":"RO",
+      "title":"Romania"
+   },
+   {
+      "customData":"Russian, others",
+      "id":"RU",
+      "title":"Russia"
+   },
+   {
+      "customData":"Kinyarwanda, French, and English (all official); Kiswahili in commercial centers",
+      "id":"SH",
+      "title":"Rwanda"
+   },
+   {
+      "customData":"English",
+      "id":"KN",
+      "title":"St. Kitts and Nevis"
+   },
+   {
+      "customData":"English (official), French patois",
+      "id":"PM",
+      "title":"St. Lucia"
+   },
+   {
+      "customData":"English, French patois",
+      "id":"VC",
+      "title":"St. Vincent and the Grenadines"
+   },
+   {
+      "customData":"Samoan, English",
+      "id":"WS",
+      "title":"Samoa"
+   },
+   {
+      "customData":"Italian",
+      "id":"SM",
+      "title":"San Marino"
+   },
+   {
+      "customData":"Portuguese (official)",
+      "id":"ST",
+      "title":"Sao Tome and Principe"
+   },
+   {
+      "customData":"Arabic",
+      "id":"SA",
+      "title":"Saudi Arabia"
+   },
+   {
+      "customData":"French (official); Wolof, Pulaar, Jola, Mandinka",
+      "id":"SN",
+      "title":"Senegal"
+   },
+   {
+      "customData":"Serbian (official); Romanian, Hungarian, Slovak, and Croatian (all official in Vojvodina); Albanian (official in Kosovo)",
+      "id":"RS",
+      "title":"Serbia"
+   },
+   {
+      "customData":"Seselwa Creole 92%, English 5%, French (all official) (2002)",
+      "id":"SC",
+      "title":"Seychelles"
+   },
+   {
+      "customData":"English (official), Mende (southern vernacular), Temne (northern vernacular), Krio (lingua franca)",
+      "id":"SL",
+      "title":"Sierra Leone"
+   },
+   {
+      "customData":"Mandarin 35%, English 23%, Malay 14.1%, Hokkien 11.4%, Cantonese 5.7%, Teochew 4.9%, Tamil 3.2%, other Chinese dialects 1.8%, other 0.9% (2000)",
+      "id":"SG",
+      "title":"Singapore"
+   },
+   {
+      "customData":"Slovak 84% (official), Hungarian 11%, Roma 2%, Ukrainian 1% (2001)",
+      "id":"SK",
+      "title":"Slovakia"
+   },
+   {
+      "customData":"Slovenian 91%, Serbo-Croatian 5% (2002)",
+      "id":"SI",
+      "title":"Slovenia"
+   },
+   {
+      "customData":"English 1%-2% (official), Melanesian pidgin (lingua franca), 120 indigenous languages",
+      "id":"SB",
+      "title":"Solomon Islands"
+   },
+   {
+      "customData":"Somali (official), Arabic, English, Italian",
+      "id":"SO",
+      "title":"Somalia"
+   },
+   {
+      "customData":"IsiZulu 23.8%, IsiXhosa 17.6%, Afrikaans 13.3%, Sepedi 9.4%, English 8.2%, Setswana 8.2%, Sesotho 7.9%, Xitsonga 4.4%, other 7.2%",
+      "id":"ZA",
+      "title":"South Africa"
+   },
+   {
+      "customData":"English (official), Arabic (includes Juba and Sudanese variants) (official), regional languages include Dinka, Nuer, Bari, Zande, Shilluk",
+      "id":"SS",
+      "title":"South Sudan"
+   },
+   {
+      "customData":"Castilian Spanish 74% (official nationwide); Catalan 17%, Galician 7%, Basque 2% (each official regionally)",
+      "id":"ES",
+      "title":"Spain"
+   },
+   {
+      "customData":"Sinhala 74% (official and national), Tamil 18% (national), other 8%; English is commonly used in government and spoken competently by about 10%",
+      "id":"LK",
+      "title":"Sri Lanka"
+   },
+   {
+      "customData":"Arabic (official), Nubian, Ta Bedawie, diverse dialects of Nilotic, Nilo-Hamitic, Sudanic languages, English",
+      "id":"SD",
+      "title":"Sudan"
+   },
+   {
+      "customData":"Dutch (official), Surinamese (lingua franca), English widely spoken, Hindustani, Javanese",
+      "id":"SJ",
+      "title":"Suriname"
+   },
+   {
+      "customData":"English, siSwati (both official)",
+      "id":"SZ",
+      "title":"Swaziland"
+   },
+   {
+      "customData":"Swedish, small Sami- and Finnish-speaking minorities",
+      "id":"SE",
+      "title":"Sweden"
+   },
+   {
+      "customData":"German 64%, French 20%, Italian 7% (all official); Romansch 0.5% (national)",
+      "id":"CH",
+      "title":"Switzerland"
+   },
+   {
+      "customData":"Arabic (official); Kurdish, Armenian, Aramaic, Circassian widely understood; French, English somewhat understood",
+      "id":"SY",
+      "title":"Syria"
+   },
+   {
+      "customData":"Chinese (Mandarin, official), Taiwanese (Min), Hakka dialects",
+      "id":"TW",
+      "title":"Taiwan"
+   },
+   {
+      "customData":"Tajik (official), Russian widely used in government and business",
+      "id":"TJ",
+      "title":"Tajikistan"
+   },
+   {
+      "customData":"Swahili, English (both official); Arabic; many local languages",
+      "id":"TZ",
+      "title":"Tanzania"
+   },
+   {
+      "customData":"Thai (Siamese), English (secondary language of the elite), ethnic and regional dialects",
+      "id":"TH",
+      "title":"Thailand"
+   },
+   {
+      "customData":"French (official, commerce); Ewe, Mina (south); Kabye, Dagomba (north); and many dialects",
+      "id":"TG",
+      "title":"Togo"
+   },
+   {
+      "customData":"Tongan (an Austronesian language), English",
+      "id":"TO",
+      "title":"Tonga"
+   },
+   {
+      "customData":"English (official), Hindi, French, Spanish, Chinese",
+      "id":"TT",
+      "title":"Trinidad and Tobago"
+   },
+   {
+      "customData":"Arabic (official, commerce), French (commerce)",
+      "id":"TN",
+      "title":"Tunisia"
+   },
+   {
+      "customData":"Turkish (official), Kurdish, Dimli, Azeri, Kabardian",
+      "id":"TR",
+      "title":"Turkey"
+   },
+   {
+      "customData":"Turkmen 72%; Russian 12%; Uzbek 9%, other 7%",
+      "id":"TC",
+      "title":"Turkmenistan"
+   },
+   {
+      "customData":"Tuvaluan, English, Samoan, Kiribati (on the island of Nui)",
+      "id":"TV",
+      "title":"Tuvalu"
+   },
+   {
+      "customData":"English (official), Ganda or Luganda, other Niger-Congo languages, Nilo-Saharan languages, Swahili, Arabic",
+      "id":"UG",
+      "title":"Uganda"
+   },
+   {
+      "customData":"Ukrainian 67%, Russian 24%, Romanian, Polish, Hungarian",
+      "id":"UA",
+      "title":"Ukraine"
+   },
+   {
+      "customData":"Arabic (official), Persian, English, Hindi, Urdu",
+      "id":"AE",
+      "title":"United Arab Emirates"
+   },
+   {
+      "customData":"English, Welsh, Scots Gaelic",
+      "id":"GB",
+      "title":"United Kingdom"
+   },
+   {
+      "customData":"English 82%, Spanish 11% (2000)",
+      "id":"US",
+      "title":"United States"
+   },
+   {
+      "customData":"Spanish, Portunol, or Brazilero",
+      "id":"UY",
+      "title":"Uruguay"
+   },
+   {
+      "customData":"Uzbek 74.3%, Russian 14.2%, Tajik 4.4%, other 7.1%",
+      "id":"UZ",
+      "title":"Uzbekistan"
+   },
+   {
+      "customData":"Bislama 23% (a Melanesian pidgin English), English 2%, French 1% (all 3 official); more than 100 local languages 73%",
+      "id":"VU",
+      "title":"Vanuatu"
+   },
+   {
+      "customData":"Spanish (official), numerous indigenous dialects",
+      "id":"VE",
+      "title":"Venezuela"
+   },
+   {
+      "customData":"Vietnamese (official); English (increasingly favored as a second language); some French, Chinese, Khmer; mountain area languages (Mon-Khmer and Malayo-Polynesian)",
+      "id":"VN",
+      "title":"Vietnam"
+   },
+   {
+      "customData":"Hassaniya Arabic, Moroccan Arabic",
+      "id":"EH",
+      "title":"Western Sahara (proposed state)"
+   },
+   {
+      "customData":"Arabic",
+      "id":"YE",
+      "title":"Yemen"
+   },
+   {
+      "customData":"English (official); major vernaculars: Bemba, Kaonda, Lozi, Lunda, Luvale, Nyanja, Tonga; about 70 other indigenous languages",
+      "id":"ZM",
+      "title":"Zambia"
+   },
+   {
+      "customData":"English (official), Shona, Ndebele (Sindebele), numerous minor tribal dialects",
+      "id":"ZW",
+      "title":"Zimbabwe"
+   }
+] 
+
+  },
+  "areasSettings": {
+    "autoZoom": true,
+    "selectedColor": "#CC0000",
+    "balloonText": "[[title]]:  [[customData]]"
+  },
+  "smallMap": {},
+  "export": {
+    "enabled": true,
+    "position": "bottom-right"
+  }
+} );
+var stringToColour = function(str) {
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  var colour = '#';
+  for (var i = 0; i < 3; i++) {
+    var value = (hash >> (i * 8)) & 0xFF;
+    colour += ('00' + value.toString(16)).substr(-2);
+  }
+  return colour;
+}
+
+function resetMap() {
+  
+  var areas = map.dataProvider.areas;
+  for (var i in areas) {
+        var id = areas[i].id;
+        areas[i].color = "#84ADE9";
+        areas[i].colorReal = areas[i].color;
+        areas[i].validate();
+  }
+}
+
+
+function highlight_language() {
+  
+  var e = document.getElementById("select_language");
+  var selectedLanguage = e.options[e.selectedIndex].text;
+  var areas = map.dataProvider.areas;
+  resetMap();
+  for (var i in areas) {
+ 	var customData=areas[i].customData;
+	
+	if (customData != undefined && customData.indexOf(selectedLanguage) !== -1) {
+		var colour =stringToColour(selectedLanguage)
+		 // update US color in data
+                var area = map.getObjectById(areas[i].id);
+                area.color = colour; 
+                area.colorReal = area.color;
+		
+                // make the chart take in new color
+                area.validate();
+
+
+	}
+	
+  }
+}
+
+
+
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+
+<select id="select_language" onchange="highlight_language();">
+  <option>--Select Language--</option>
+  <option>French</option>
+  <option>English</option>
+  <option>Spanish</option>
+  <option>Hindi</option>
+  <option>Chinese</option>
+  <option>Portuguese</option>
+  <option>Arabic</option>
+  <option>Bengali</option>
+  <option>Russian</option>
+  <option>Japanese</option>
+  <option>Punjabi</option>
+</select>
+
+
+
+<p class="footnote">
+<h2>Genius Hour 5th grade (Ms. White)  project by Suhina Agravat</h2>
+</p>
